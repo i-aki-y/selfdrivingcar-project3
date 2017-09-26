@@ -123,7 +123,7 @@ Figure 4: Top is original steering angle distribution of training data. The bott
 
 To augment the data, I randomly flipped images and angles. This process is added in the generator function (model.py lines 144-116). I also used left and right side image with the correction angle $\pm0.25$ (model.py lines 89, 90).
 
-![Multicamera](./Multicamera.png)
+![Multicamera](./multicamera.png)
 Figure 5: Different camera views are shown. These are taken from different camera positions. Steering angle corrections are introduced such as (+0.25, 0.0, -0.25) from left to right.
 
 After some trial and errors, I observed that the vehicle has some difficulty for the specific corner or situations. To overcome the difficulty, I introduce some additional training data including only the positions in which the model fails. For example, when a model failed to curve the specific corner, I added records the vehicle drives around the corner.
